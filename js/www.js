@@ -185,7 +185,10 @@ function divMove(obj,overHeight,num){
         },10);
     }
 }
-var autoplay=true;//自动播放音乐
+
+
+var autoplay=false;//强制自动播放音乐
+
 function btnChange(index,flag,speed){
 	if(autoplay){
 		player.play();

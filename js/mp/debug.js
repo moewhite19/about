@@ -8,7 +8,7 @@ var player = new MPlayer({
 	// 专辑图片错误时显示的图片
 	defaultImg: 'img/mplayer_error.png',
 	// 自动播放
-	autoPlay: true,
+	autoPlay: false,
 	// 播放模式(0->顺序播放,1->单曲循环,2->随机播放,3->列表循环(默认))
 	playMode:0,
 	playList:0,

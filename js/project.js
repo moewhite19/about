@@ -143,7 +143,6 @@ function loadScript(url, callback) {
   document.body.appendChild(script);
 }
 
-
 /*var vv=document.createElement('meta');
 vv.setAttribute('name','viewpotr');
 vv.setAttribute('content','width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no');
