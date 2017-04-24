@@ -93,11 +93,13 @@ var MPlayer = (function () {
 		 * 绑定事件
 		 */
 		function bindEvents () {
-			// 专辑图片加载失败将使用默认图片
-			$this.dom.cover.error(function () {
+//			// 专辑图片加载失败将使用默认图片
+/*			jquery-2.2.4.js 以上版本失效
+ 				$this.dom.cover.error(function () {
 				$(this).attr('src',$this.settings.defaultImg);
-			});
-			// 上一首
+});
+*/
+// 上一首
 			$this.dom.prev.click(function() {
 				$this.prev();
 			});

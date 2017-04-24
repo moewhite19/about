@@ -329,7 +329,7 @@ var scrollFunc=function(e){
                  setTimeout(function(){
                      oB = true;
                  },700);
-                 console.log('ss');
+                 console.log('新加载页面');
              }
              else if(e.detail <= -3){
                  oB = false;
@@ -368,6 +368,7 @@ window.onresize = function(){
         imgChange(iB);
         btnChange(indexs,false); 
     }
+    setTime_li()
 }
 
 function imgChange(iB){
@@ -401,25 +402,24 @@ var li_times = 0;
 var left_div = document.getElementById('left_div');
 var right_div = document.getElementById('right_div');
 left_div.onclick = function () {
-    if(li_times == 0){
-        li_times = 0;
-    }
-    else{
-        document.getElementById('timeUl').style.left = document.getElementById('timeUl').offsetLeft + e_li[0].offsetWidth + 'px';
-        li_times--;
+    if(li_times>0){
+    	li_times--;
+		setTime_li();
     }
 }
 
 right_div.onclick = function () {
-    if(li_times == (e_li.length-2)){
-        li_times == e_li.length - 2;
-    }
-    else{
-        document.getElementById('timeUl').style.left = document.getElementById('timeUl').offsetLeft - e_li[0].offsetWidth +'px';
-        li_times++;
+    if(li_times<e_li.length-2){
+    	li_times++;
+    	setTime_li();
     }
 }
-
+//时间轴翻页
+function setTime_li(){
+	var i = e_li[0].offsetWidth*li_times;
+    document.getElementById('timeUl').style.left = -i +'px';
+    console.log(li_times)
+}
 //手势事件
 var startY,endY,oldY
 window.addEventListener('touchstart', touchStart,false);
