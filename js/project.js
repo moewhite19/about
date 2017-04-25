@@ -1,5 +1,6 @@
 var debug = false; //调试模式
-
+var logmess=[];
+rlog="";
 //然并卵的入口
 
 function about_main() {
@@ -7,8 +8,8 @@ function about_main() {
 	if(document.documentElement.clientWidth > 2050) {
 		alert('屏幕分辨率可能超过我的网页理想数值');
 	}
-	//测试用的标题栏
-	if(debug) log('测试');
+	//测试用用
+	if(debug) logout('测试');
 
 	//点击播放音乐 未完成
 	var playes = document.getElementsByName('play_music');
@@ -16,7 +17,7 @@ function about_main() {
 		playes[i].onclick = function() {
 			player.play();
 			player.dom.container.toggleClass('mp-show');
-		}
+		};
 	};
 
 	//阻止手势
@@ -45,27 +46,23 @@ function ev() {
 	}
 }
 
-//底部累计输出 如果k为true 那么覆盖输出否则累积
-
+//主动调试输出 如果k为true 那么覆盖输出否则累积
 function logout(m, k) {
 	var log = byid('mydebug');
+	if(m==rlog){
+		logmess[y]+="+";
+	}else{
+		logmess.push(m);
+		rlog=m;
+	}
 	if(!k) {
-		log.innerHTML = log.innerHTML + (log.innerHTML == '' ? '' : '<br>') + m;
+		log.innerHTML = logmess.join('<br>');
 	} else {
 		log.innerHTML = m;
 	}
 }
-//标题栏输出
-function log(m) {
-	/*	var b=byid('debugtex');
-		b.innerText=m;
-		//b.style.fontSize='14px';
-		*/
-	document.title = m;
-}
 
 //计时
-
 function show_date_time() {
 	var tm = document.getElementsByName('show_time');
 	window.setTimeout("show_date_time()", 1000);
@@ -142,6 +139,10 @@ function loadScript(url, callback) {
 	script.src = url;
 	document.body.appendChild(script);
 }
+
+          ;
+
+
 
 /*var vv=document.createElement('meta');
 vv.setAttribute('name','viewpotr');

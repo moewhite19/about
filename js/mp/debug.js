@@ -6,7 +6,7 @@ var player = new MPlayer({
 	// 播放列表
 	songList: mplayer_song,
 	// 专辑图片错误时显示的图片
-	defaultImg: 'img/mplayer_error.png',
+	defaultImg: 'img/mp/mplayer_error.png',
 	// 自动播放
 	autoPlay: false,
 	// 播放模式(0->顺序播放,1->单曲循环,2->随机播放,3->列表循环(默认))
@@ -36,6 +36,7 @@ var player = new MPlayer({
 		var $this = this;
 		var lrc = $this.getLrc();
 		console.log('当前歌词：' + lrc);
+		logout(lrc);
 		if($this.settings.outLrc&&!$this.audio.prop('paused')){
 			document.title=lrc==undefined?detitle:lrc;
 		}else {
