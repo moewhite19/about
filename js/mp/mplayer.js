@@ -196,7 +196,7 @@ var MPlayer = (function () {
 			for (var i = 0; i < list.length;i++) {
 				$this.list[i] = [];
 				// 寻找列表公用数据
-				for (var j = 0; j < list[i].length;j++) {
+				for (j in list[i]) {
 					if (list[i][j].basic) {
 						$this.list[i].listName = list[i][j].name || '-';
 						$this.list[i].singerName = list[i][j].singer || '-';

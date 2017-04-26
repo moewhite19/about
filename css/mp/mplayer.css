@@ -48,7 +48,7 @@
   width: 599px;
   height: 120px;
   position: fixed;
-  bottom: 150px;
+  bottom: 80px;
   left: -574px;
   border-radius: 0 5px 5px 0;
   background-color: #212121;
@@ -128,7 +128,7 @@
 .mp .mp-lrc-close {
   width: 7px;
   height: 7px;
-  background: url("../images/mp/mplayer_bg.png") no-repeat 0 -56px;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat 0 -56px;
   position: absolute;
   top: 7px;
   right: -215px;
@@ -152,7 +152,7 @@
 .mp .mp-list-toggle {
   width: 21px;
   height: 14px;
-  background: url("../images/mp/mplayer_bg.png") no-repeat -29px -90px;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat -29px -90px;
   float: left;
 }
 /* line 141, mplayer.less */
@@ -163,7 +163,7 @@
 .mp .mp-lrc-toggle {
   width: 14px;
   height: 14px;
-  background: url("../images/mp/mplayer_bg.png") no-repeat -29px -56px;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat -29px -56px;
   float: left;
   margin-left: 15px;
 }
@@ -199,7 +199,7 @@
 .mp .mp-next {
   width: 24px;
   height: 28px;
-  background: url("../images/mp/mplayer_bg.png") no-repeat;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat;
   float: left;
   margin-top: 8.5px;
 }
@@ -224,7 +224,7 @@
   height: 45px;
   margin-right: 30px;
   float: left;
-  background: url("../images/mp/mplayer_bg.png") no-repeat -86px 0;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat -86px 0;
 }
 /* line 199, mplayer.less */
 .mp .mp-pause:hover {
@@ -238,7 +238,7 @@
 .mp .mp-mode {
   width: 26px;
   height: 21px;
-  background: url("../images/mp/mplayer_bg.png") no-repeat 0 -105px;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat 0 -105px;
   margin-right: 20px;
   float: left;
   margin-top: 12px;
@@ -272,7 +272,7 @@
 .mp .mp-vol-img {
   width: 29px;
   height: 21px;
-  background: url("../images/mp/mplayer_bg.png") no-repeat 0 -63px;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat 0 -63px;
   margin-top: 12px;
   float: left;
 }
@@ -337,7 +337,7 @@
   top: 0;
   height: 120px;
   width: 25px;
-  background: url("../images/mp/mplayer_bg.png") no-repeat -124px 0;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat -124px 0;
 }
 /* line 292, mplayer.less */
 .mp .mp-toggle:hover {
@@ -348,7 +348,7 @@
   width: 12px;
   height: 21px;
   display: inline-block;
-  background: url("../images/mp/mplayer_bg.png") no-repeat -104px -126px;
+  background: url("../../images/mp/mplayer_bg.png") no-repeat -104px -126px;
   position: absolute;
   top: 50px;
   left: 6px;
