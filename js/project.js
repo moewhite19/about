@@ -1,6 +1,5 @@
 var debug = false; //调试模式
-var logmess=[];
-rlog="";
+
 //然并卵的入口
 
 function about_main() {
@@ -46,19 +45,26 @@ function ev() {
 	}
 }
 
-//主动调试输出 如果k为true 那么覆盖输出否则累积
+//主动调试输出 如果k为true 那么覆盖输出否则累计
+var logflg={
+	s:"",
+	i:0
+};
 function logout(m, k) {
-	var log = byid('mydebug');
-	if(m==rlog){
-		logmess[y]+="+";
+	var e = byid('mydebug');
+	if(k){
+		e.innerText=m;
+	}else if(m==logflg.s){
+		var m=e.innerText.split("\n");
+		var en=logflg.s+" "+logflg.i;
+		m[m.length-2]=en;
+		m=m.join("\n");
+		e.innerText=m;
+		logflg.i+=1;
 	}else{
-		logmess.push(m);
-		rlog=m;
-	}
-	if(!k) {
-		log.innerHTML = logmess.join('<br>');
-	} else {
-		log.innerHTML = m;
+		e.innerText=e.innerText+m+"\n";
+		logflg.s=m;
+		logflg.i=0;
 	}
 }
 
