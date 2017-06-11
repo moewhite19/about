@@ -35,8 +35,8 @@ var player = new MPlayer({
 	}).on('timeUpdate', function() {
 		var $this = this;
 		var lrc = $this.getLrc();
-		console.log('当前歌词：' + lrc);
-		logout(lrc);
+		//console.log('当前歌词：' + lrc);
+		//logout(lrc);
 		if($this.settings.outLrc&&!$this.audio.prop('paused')){
 			document.title=lrc==undefined?detitle:lrc;
 		}else {
