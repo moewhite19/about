@@ -25,7 +25,7 @@
     var box01_p = document.getElementById('box01_text').children;
     function boxOne() {
 		if(indexs!=0){
-			logout("未到0");
+			//暂无
 		}
         else if(box01_index >=0 && box01_index <= (box01_p.length-1)){
             box01_p[box01_index].style.opacity = '1';
@@ -140,7 +140,7 @@ function addActive() {
 //第二屏动画
 function boxTow() {
 	if(indexs!=1){
-		
+		//暂无
 	}
 	else if(box02_index >= 0 && box02_index < box02_text.length)
 	{
