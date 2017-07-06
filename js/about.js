@@ -24,7 +24,10 @@
     var box01_index = 0;
     var box01_p = document.getElementById('box01_text').children;
     function boxOne() {
-        if(box01_index >=0 && box01_index <= (box01_p.length-1)){
+		if(indexs!=0){
+			logout("未到0");
+		}
+        else if(box01_index >=0 && box01_index <= (box01_p.length-1)){
             box01_p[box01_index].style.opacity = '1';
             box01_index ++;
         }
@@ -116,7 +119,7 @@ var bg = document.getElementsByClassName("box_bg");
 var boxs = document.getElementsByClassName("box");
 var indexs = 0;
 var process = document.getElementById('bar_container').children;//进度条
-var box02_flag = false;       //还未曾到第二屏
+var box02_flag = true;       //还未曾到第二屏
 var box02_text = document.getElementById('box02_text').children; //第二屏文字
 var box02_index = 0;
 var box02_timer;
@@ -136,7 +139,11 @@ function addActive() {
 
 //第二屏动画
 function boxTow() {
-    if(box02_index >= 0 && box02_index < box02_text.length){
+	if(indexs!=1){
+		
+	}
+	else if(box02_index >= 0 && box02_index < box02_text.length)
+	{
         box02_text[box02_index].style.right = '0';
         box02_index++;
     }
@@ -249,13 +256,15 @@ function btnChange(index,flag,speed){
             indexs = 4;
         }  
     }
-    if(indexs == 1 && !box02_flag){
+    /*if(indexs == 1 && !box02_flag){
         box02_flag = true;
     }
-    if(box02_flag){
+	*/
+    if(indexs==1&&box02_flag){
         //第二屏动画
         var timer = setTimeout(addActive,1000);
         box02_timer = setInterval(boxTow,1100);
+		box02_flag=false;
     }
 }
 

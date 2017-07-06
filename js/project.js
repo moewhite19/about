@@ -48,7 +48,7 @@ function ev() {
 //主动调试输出 如果k为true 那么覆盖输出否则累计
 var logflg={
 	s:"",
-	i:0
+	i:1
 };
 function logout(m, k) {
 	var e = byid('mydebug');
@@ -64,7 +64,7 @@ function logout(m, k) {
 	}else{
 		e.innerText=e.innerText+m+"\n";
 		logflg.s=m;
-		logflg.i=0;
+		logflg.i=1;
 	}
 }
 
