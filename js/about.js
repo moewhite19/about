@@ -421,6 +421,7 @@ right_div.onclick = function () {
     if(li_times<e_li.length-2){
     	li_times++;
     	setTime_li();
+		player.play();
     }
 }
 //时间轴翻页
