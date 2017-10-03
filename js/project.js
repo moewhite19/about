@@ -1,4 +1,4 @@
-var debug = false; //调试模式
+var debug = true; //调试模式
 
 //然并卵的入口
 
@@ -46,25 +46,26 @@ function ev() {
 }
 
 //主动调试输出 如果k为true 那么覆盖输出否则累计
-var logflg={
-	s:"",
-	i:1
+var logflg = {
+	s: "",
+	i: 1
 };
+
 function logout(m, k) {
 	var e = byid('mydebug');
-	if(k){
-		e.innerText=m;
-	}else if(m==logflg.s){
-		var m=e.innerText.split("\n");
-		var en=logflg.s+" "+logflg.i;
-		m[m.length-2]=en;
-		m=m.join("\n");
-		e.innerText=m;
-		logflg.i+=1;
-	}else{
-		e.innerText=e.innerText+m+"\n";
-		logflg.s=m;
-		logflg.i=1;
+	if(k) {
+		e.innerText = m;
+	} else if(m == logflg.s) {
+		var m = e.innerText.split("\n");
+		var en = logflg.s + " " + logflg.i;
+		m[m.length - 2] = en;
+		m = m.join("\n");
+		e.innerText = m;
+		logflg.i += 1;
+	} else {
+		e.innerText = e.innerText + m + "\n";
+		logflg.s = m;
+		logflg.i = 1;
 	}
 }
 
@@ -146,9 +147,25 @@ function loadScript(url, callback) {
 	document.body.appendChild(script);
 }
 
-          ;
-
-
+function getURL(url, fun, bool) {
+	var xmlhttp;
+	if(bool == undefined) bool = true;
+	if(window.XMLHttpRequest) {
+		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp = new XMLHttpRequest();
+	} else {
+		// IE6, IE5 浏览器执行代码
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange = function() {
+		if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			logout(xmlhttp.responseText);
+			fun(xmlhttp.responseText);
+		}
+	}
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+}
 
 /*var vv=document.createElement('meta');
 vv.setAttribute('name','viewpotr');

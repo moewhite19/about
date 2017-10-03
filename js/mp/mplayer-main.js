@@ -32,15 +32,16 @@ var player = new MPlayer({
 		var song = $this.getCurrentSong(true);
 		var songName = song.name + ' - ' + song.singer;
 		console.log('即将播放' + songName + '，return false;可以取消播放');
+		loadlrc();
 	}).on('timeUpdate', function() {
 		var $this = this;
 		var lrc = $this.getLrc();
 		//console.log('当前歌词：' + lrc);
 		//logout(lrc);
-		if($this.settings.outLrc&&!$this.audio.prop('paused')){
-			document.title=lrc==undefined?detitle:lrc;
-		}else {
-			document.title=detitle;
+		if($this.settings.outLrc && !$this.audio.prop('paused')) {
+			document.title = lrc == undefined ? detitle : lrc;
+		} else {
+			document.title = detitle;
 		}
 	}).on('end', function() {
 		var $this = this;
@@ -60,3 +61,24 @@ var player = new MPlayer({
 //$(document.body).append(player.audio); // 测试用
 
 setEffects(player);
+
+function loadlrc() {
+	var list = player.getCurrentList();
+	var song = player.getCurrentSong();
+	if(player.list[list][song].slrc != undefined) {
+		getURL(player.list[list][song].slrc, (function(str) {
+				var list = player.getCurrentList();
+				var song = player.getCurrentSong();
+				lrc = player._parseLrc(str)
+				player.list[list][song].lrc = lrc;
+				player._setLrc(lrc);
+				console.log(list +"  "+song+" 下载歌词 ");
+				player.list[list][song].slrc=undefined;
+				}), true);
+		}
+		var url = mplayer_song[list][song].slrc
+	}
+
+	/*getURL("audio/lrc/zuihoudeluxin.txt", (function(str) {
+		logout(str)
+	}), true);*/
