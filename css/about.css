@@ -114,7 +114,13 @@ body{
     margin-right: 55px;
     cursor: pointer;
     font-size: 16px;
+    transition: all cubic-bezier(.08,.82,.17,1) 0.3s;
 }
+
+.nav_li_on{
+    color: red;
+}
+
 
 .head_nav ul li a{
     font-size: 16px;
@@ -134,15 +140,11 @@ body{
     position: fixed;
     width: 100%;
     height: 100%;
+    transition: all ease 1.5s;
+    -o-transition: all ease 1.5s;
+    -webkit-transition: all ease 1.5s;
+    -moz-transition: all ease 1.5s;
 }
-/*
-#wrapBox{
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-
-}
-*/
 .box{
     overflow: hidden;
     position: relative;
@@ -256,14 +258,14 @@ body{
 
 .green_cycle_img{
     animation-name: clockwise;
-    animation-duration:1s;
+    animation-duration:1.8s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: normal;
 
     /*safari & Chrome */
     -webkit-animation-name:clockwise;
-    -webkit-animation-duration:1s;
+    -webkit-animation-duration:1.8s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: normal;
@@ -271,14 +273,14 @@ body{
 
 .yellow_cycle_img{
     animation-name: anticlockwise;
-    animation-duration:1s;
+    animation-duration:1.3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: normal;
 
     /*safari & Chrome */
     -webkit-animation-name:anticlockwise;
-    -webkit-animation-duration:1s;
+    -webkit-animation-duration:1.3s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: normal;
@@ -1083,10 +1085,6 @@ body{
 
 .box_bg{
     position: absolute;
-}
-
-.nav_li_on{
-    color: red;
 }
 
 .hobby_img_info_mob{

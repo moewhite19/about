@@ -89,22 +89,25 @@
 }
 /* line 83, mplayer.less */
 .mp .mp-lrc-box {
-  padding: 10px;
+  padding: 0px;
   position: absolute;
-  top: 0;
-  left: 600px;
+  top: 5px;
+  left: 599px;
   background-color: #212121;
   border-radius: 0 5px 5px 0;
   overflow: hidden;
-  opacity: 0;
-  -webkit-transition: opacity .5s;
-  -moz-transition: opacity .5s;
-  -o-transition: opacity .5s;
-  transition: opacity .5s;
+  opacity: 1;
+  -webkit-transition: all ease 1.2s;
+  -moz-transition: all ease 1.2s;
+  -o-transition: all ease 1.2s;
+  transition: all ease 1.2s;
+  width: 0px;
 }
 /* line 96, mplayer.less */
 .mp .mp-lrc-box.mp-lrc-show {
-  opacity: 1;
+width: 200px;
+padding: 10px;
+top: 0px;
 }
 /* line 98, mplayer.less */
 .mp .mp-lrc-box.mp-lrc-show ~ .mp-lrc-close {

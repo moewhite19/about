@@ -16,6 +16,7 @@
  * 其中name为歌曲名称
  * src为歌曲文件路径
  * lrc为歌词，请用\n或\r将每行歌词隔开，否则无法识别
+ * slrc为歌词文件路径 可有可无
  */
 var mplayer_song = [
 	[{
@@ -33,9 +34,17 @@ var mplayer_song = [
 			"slrc":"audio/lrc/zuihoudeluxin.lrc"
 		},
 		{
+			"name": "依伊-致上杉绘梨衣（《龙族》同人）",
+			"singer": "琢彻",
+			"img": "http://p1.music.126.net/J-ciggWVRzfg1zch7sBJNQ==/18198016951733246.jpg?param=130y130",
+			"src": "audio/eyii.mp3",
+			"lrc": "[00:00.00]歌词加载中...",
+			"slrc":"audio/lrc/eyii.lrc"
+		},
+		{
 			"name": "东京不太热",
 			"singer": "囧菌",
-			"img": "images/error.jpg",
+			"img": "images/404.jpg",
 			"src": "audio/music3.mp3",
 			"lrc": "[00:00.00]歌词加载中...",
 			"slrc":"audio/lrc/music3.lrc"

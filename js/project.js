@@ -1,4 +1,4 @@
-var debug = true; //调试模式
+var debug = false; //调试模式
 
 //然并卵的入口
 
@@ -159,7 +159,7 @@ function getURL(url, fun, bool) {
 	}
 	xmlhttp.onreadystatechange = function() {
 		if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			logout(xmlhttp.responseText);
+			//logout(xmlhttp.responseText);
 			fun(xmlhttp.responseText);
 		}
 	}

@@ -107,7 +107,7 @@
     var blogTimer=setInterval(moveblog,2);
     
     //第一屏文字加载
-     var boxOneTimer = setInterval(boxOne,3200);
+     var boxOneTimer = setInterval(boxOne,1800);
 })();
 
 var f_btn = document.getElementById("float_btn").children;
@@ -154,48 +154,51 @@ function boxTow() {
   
 //滚动函数
 function divMove(obj,overHeight,num){
-    if(obj.offsetTop >= overHeight){
-        //向下滚动
-        var timer;
-        timer = setInterval(function(){
-            if((obj.offsetTop - overHeight) <= num && (obj.offsetTop - overHeight) > 0){
-                obj.style.top  = overHeight + 'px';
-                clearInterval(timer);
-            }
-            else if((obj.offsetTop - overHeight) > num){
-                obj.style.top = obj.offsetTop - num + 'px';
-            }
- /*           else{
-                //停止滚动
-                //obj.style.top = obj.offsetTop - num + 'px';
-                clearInterval(timer);
-            }*/
-        },10);
-    }
-    else if(obj.offsetTop < overHeight){
-        //向上滚动
-        var timer;
-        timer = setInterval(function(){
-           if((overHeight - obj.offsetTop ) <= num && (overHeight - obj.offsetTop) > 0){
-               //最后定位
-               obj.style.top  = overHeight + 'px';
-			    clearInterval(timer);
-           } 
-            else if((overHeight - obj.offsetTop) > num){
-                //继续滚动
-                obj.style.top = obj.offsetTop + num +'px';
-            }
-/*            else{
-                //停止滚动
-                clearInterval(timer);
-            }*/
-        },10);
-    }
+	//console.log("divout "+obj+" or "+overHeight+" and "+num);
+	var box=document.getElementById("wrapBox");
+	box.style.top=overHeight+"px";
+//  if(obj.offsetTop >= overHeight){
+//      //向下滚动
+//      var timer;
+//      timer = setInterval(function(){
+//          if((obj.offsetTop - overHeight) <= num && (obj.offsetTop - overHeight) > 0){
+//              obj.style.top  = overHeight + 'px';
+//              clearInterval(timer);
+//          }
+//          else if((obj.offsetTop - overHeight) > num){
+//              obj.style.top = obj.offsetTop - num + 'px';
+//          }
+// /*           else{
+//              //停止滚动
+//              //obj.style.top = obj.offsetTop - num + 'px';
+//              clearInterval(timer);
+//          }*/
+//      },10);
+//  }
+//  else if(obj.offsetTop < overHeight){
+//      //向上滚动
+//      var timer;
+//      timer = setInterval(function(){
+//         if((overHeight - obj.offsetTop ) <= num && (overHeight - obj.offsetTop) > 0){
+//             //最后定位
+//             obj.style.top  = overHeight + 'px';
+//			    clearInterval(timer);
+//         } 
+//          else if((overHeight - obj.offsetTop) > num){
+//              //继续滚动
+//              obj.style.top = obj.offsetTop + num +'px';
+//          }
+///*            else{
+//              //停止滚动
+//              clearInterval(timer);
+//          }*/
+//      },10);
+//  }
 }
-
-
 var autoplay=false;//强制自动播放音乐
 
+
+//滚动函数
 function btnChange(index,flag,speed){
 	if(autoplay){
 		player.play();
@@ -204,32 +207,40 @@ function btnChange(index,flag,speed){
     var height = window.innerHeight;
     var fh = foot.offsetHeight;
     for(var n=0; n<f_btn.length;n++){
-            f_btn[n].style.background = "transparent";
+    	//由js设置对象属性改为设置class
+            //f_btn[n].style.background = "transparent";
+            f_btn[n].classList.remove("btn_on")
     }
     
     for(var n=0;n<nav_ul.length;n++){
-        nav_ul[n].style.color = '#000000';
+        //nav_ul[n].style.color = '#000000';
+        nav_ul[n].classList.remove("nav_li_on")
     }
 
     if(flag){
         if(index <= 0 ){
             indexs = 0;
-            f_btn[0].style.background = "#ffffff"; 
+            //f_btn[0].style.background = "#ffffff"; 
+            f_btn[0].classList.add("btn_on")
             //wrapBox.style.top = "0";
-            nav_ul[0].style.color = 'red';
+            //nav_ul[0].style.color = 'red';
+            nav_ul[0].classList.add("nav_li_on")
             divMove(wrapBox,0,20*speed);
         }
         else if(index >0 && index <=3){
-            f_btn[index].style.background = "#ffffff"; 
+            //f_btn[index].style.background = "#ffffff"; 
+            f_btn[index].classList.add("btn_on")
             //wrapBox.style.top = (-height * indexs) +"px";
-            nav_ul[index].style.color = 'red';
+            //nav_ul[index].style.color = 'red';
+            nav_ul[index].classList.add("nav_li_on")
             divMove(wrapBox,-(height * indexs),20*speed);
         }
         else if(index == 4){
             indexs = 4;
             //wrapBox.style.top = (-height * 3 - fh) +"px";
             divMove(wrapBox,(-height * 3 - fh),20*speed);
-            nav_ul[index].style.color = 'red';
+            //nav_ul[index].style.color = 'red';
+            nav_ul[index].classList.add("nav_li_on")
         }
         else{
             indexs = 4;
@@ -238,19 +249,24 @@ function btnChange(index,flag,speed){
     else{
         if(index <= 0 ){
             indexs = 0;
-            f_btn[0].style.background = "#ffffff"; 
-            nav_ul[0].style.color = 'red';
+            //f_btn[0].style.background = "#ffffff"; 
+            f_btn[0].classList.add("btn_on")
+            //nav_ul[0].style.color = 'red';
+            nav_ul[0].classList.add("nav_li_on")
             wrapBox.style.top = "0";
         }
         else if(index >0 && index <=3){
-            f_btn[index].style.background = "#ffffff"; 
-            nav_ul[index].style.color = 'red';
+            //f_btn[index].style.background = "#ffffff"; 
+            f_btn[index].classList.add("btn_on")
+            //nav_ul[index].style.color = 'red';
+            nav_ul[index].classList.add("nav_li_on")
             wrapBox.style.top = (-height * indexs) +"px";
         }
         else if(index == 4){
             indexs = 4;
             wrapBox.style.top = (-height * 3 - fh) +"px";
-            nav_ul[index].style.color = 'red';
+            //nav_ul[index].style.color = 'red';
+            nav_ul[index].classList.add("nav_li_on")
         }
         else{
             indexs = 4;
@@ -428,7 +444,6 @@ right_div.onclick = function () {
 function setTime_li(){
 	var i = e_li[0].offsetWidth*li_times;
     document.getElementById('timeUl').style.left = -i +'px';
-    console.log(li_times)
 }
 //手势事件
 var startY,endY,oldY
