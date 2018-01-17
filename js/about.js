@@ -186,14 +186,9 @@ function divMove(obj, overHeight, num) {
 	//      },10);
 	//  }
 }
-var autoplay = false; //强制自动播放音乐
 
 //滚动函数
 function btnChange(index, flag, speed) {
-	if(autoplay) {
-		player.play();
-		autoplay = false;
-	}
 	var height = window.innerHeight;
 	var fh = foot.offsetHeight;
 	for(var n = 0; n < f_btn.length; n++) {
