@@ -28,8 +28,8 @@ var mplayer_song = [
 		{
 			"name": "最后的旅行",
 			"singer": "Rainton桐",
-			"img": "audio/album/zuihoudeluxin.jpg",
-			"src": "audio/zuihoudeluxin.mp3",
+			"img": "http://p1.music.126.net/8qhWDWoNejyMcAAwAm2pNA==/17752714742397400.jpg?param=130y130",
+			"src": "http://m10.music.126.net/20180117182437/42d0263a5697970e38a45263cce77a40/ymusic/1762/1bd3/795c/a2520e858abe3c6c640d8087d165fa60.mp3",
 			"lrc": "[00:00.00]歌词加载中...",
 			"slrc":"audio/lrc/zuihoudeluxin.lrc"
 		},
@@ -37,7 +37,7 @@ var mplayer_song = [
 			"name": "依伊-致上杉绘梨衣（《龙族》同人）",
 			"singer": "琢彻",
 			"img": "http://p1.music.126.net/J-ciggWVRzfg1zch7sBJNQ==/18198016951733246.jpg?param=130y130",
-			"src": "audio/eyii.mp3",
+			"src": "http://m10.music.126.net/20180117182145/e4ec20be35819d33812db3af9c443657/ymusic/4b46/ea96/830d/b099e92153351233a8cb6c74a871c3f0.mp3",
 			"lrc": "[00:00.00]歌词加载中...",
 			"slrc":"audio/lrc/eyii.lrc"
 		},
@@ -45,7 +45,7 @@ var mplayer_song = [
 			"name": "樱花的短篇（奏(かなで) ）",
 			"singer": "千陵安浅",
 			"img": "http://p1.music.126.net/5boOknJ-Oo1Dr0o2IF690g==/16579535835744609.jpg?param=130y130",
-			"src": "audio/sakura.mp3",
+			"src": "http://m10.music.126.net/20180117181248/40be6db38a140c91fd2558bb1436ca7c/ymusic/1ad3/a546/c5df/a9d93963c3b81a4f067730379573bd07.mp3",
 			"lrc": "[00:00.00]歌词加载中...",
 			"slrc":"audio/lrc/eyii.lrc"
 		}
@@ -60,15 +60,15 @@ var mplayer_song = [
 			"name": "东京不太热",
 			"singer": "囧菌",
 			"img": "images/404.jpg",
-			"src": "audio/music3.mp3",
+			"src": "http://m10.music.126.net/20180117183424/6a57be51eb46d41b13e9ffd80cb98845/ymusic/2a8c/16f3/3f11/5305dd437eec87db47edaaddb6a80d25.mp3",
 			"lrc": "[00:00.00]歌词加载中...",
 			"slrc":"audio/lrc/music3.lrc"
 		},
 		{
 			"name": "銀河鉄道のペンギン (feat. nicamoq)",
 			"singer": "Aiobahn Yunomi",
-			"img": "audio/album/music2.jpg",
-			"src": "audio/music2.mp3",
+			"img": "http://p1.music.126.net/_3pNNriwuL--W5CUKHC2-Q==/3261151499483479.jpg?param=130y130",
+			"src": "http://m10.music.126.net/20180117183014/c295ad3a41b927ec0bc41b974aae88ce/ymusic/411b/0c83/e8ed/7fe987886b6662cea3b0e8097bb4f0db.mp3",
 			"lrc": "[00:00.00]歌词加载中...",
 			"slrc":"audio/lrc/music2.lrc"
 		},
@@ -76,7 +76,7 @@ var mplayer_song = [
 			"name": "Undertale",
 			"singer": "Toby Fox",
 			"img": "http://p4.music.126.net/oZe-JSuWYAR8zSa29g9g0g==/3254554423361647.jpg?param=177y177",
-			"src": "audio/Toby_Fox-Undertale.mp3",
+			"src": "http://m10.music.126.net/20180117183326/6d68a0628af99d5428443c8bae22a612/ymusic/dbd7/7ee3/768b/c5a830097d85169078ee61c4f83a366b.mp3",
 			"lrc": ""
 		}
 	],
@@ -89,8 +89,8 @@ var mplayer_song = [
 		{
 			"name": "I'm So Happy",
 			"singer": "中原龍太郎",
-			"img": "audio/album/music4.jpg",
-			"src": "audio/music4.mp3",
+			"img": "http://p1.music.126.net/cxjF4-0CX9TXMF50zxgxXg==/2426622162526064.jpg?param=177y177",
+			"src": "http://m10.music.126.net/20180117183717/ddc1b5bcc67f2b917871ce862aca3b1f/ymusic/b279/e666/a766/f0829b527bbd07edd1f7ffca9cd13a74.mp3",
 			"lrc": "",
 			"slrc":"audio/lrc/music4.lrc"
 		},
