@@ -145,6 +145,9 @@ body{
     -webkit-transition: all ease 1.5s;
     -moz-transition: all ease 1.5s;
 }
+.warpBox_tochMoveing{
+    transition: all ease 0s;
+}
 .box{
     overflow: hidden;
     position: relative;
