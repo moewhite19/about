@@ -4,8 +4,8 @@ var debug = false; //调试模式
 
 function about_main() {
 	//然并卵的检测分辨率
-	if(document.documentElement.clientWidth > 2050) {
-		alert('屏幕分辨率可能超过我的网页理想数值');
+	if(document.documentElement.clientWidth < 800) {
+		alert('此屏幕分辨率可能无法展现全部内容');
 	}
 	//测试用用
 	if(debug) logout('测试');

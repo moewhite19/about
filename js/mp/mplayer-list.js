@@ -21,7 +21,7 @@
 var mplayer_song = [
 	[{
 			"basic": true,
-			"name": "默认",
+			"name": "Ricardo",
 			"singer": "某不知名白狼",
 			"img": "image/pic/head.jpg"
 		},
@@ -40,6 +40,21 @@ var mplayer_song = [
 			"src": "audio/eyii.mp3",
 			"lrc": "[00:00.00]歌词加载中...",
 			"slrc":"audio/lrc/eyii.lrc"
+		},
+		{
+			"name": "樱花的短篇（奏(かなで) ）",
+			"singer": "千陵安浅",
+			"img": "http://p1.music.126.net/5boOknJ-Oo1Dr0o2IF690g==/16579535835744609.jpg?param=130y130",
+			"src": "audio/sakura.mp3",
+			"lrc": "[00:00.00]歌词加载中...",
+			"slrc":"audio/lrc/eyii.lrc"
+		}
+	],
+	[{
+			"basic": true,
+			"name": "M",
+			"singer": " ",
+			"img": "image/null.jpg"
 		},
 		{
 			"name": "东京不太热",
@@ -67,9 +82,9 @@ var mplayer_song = [
 	],
 	[{
 			"basic": true,
-			"name": "吸毒",
-			"singer": " ",
-			"img": "image/null.jpg"
+			"name": "Lu",
+			"singer": "某不知名白狼",
+			"img": "image/pic/head.jpg"
 		},
 		{
 			"name": "I'm So Happy",
@@ -78,13 +93,6 @@ var mplayer_song = [
 			"src": "audio/music4.mp3",
 			"lrc": "",
 			"slrc":"audio/lrc/music4.lrc"
-		}
-	],
-	[{
-			"basic": true,
-			"name": "其他",
-			"singer": "某不知名白狼",
-			"img": "image/pic/head.jpg"
 		},
 		{
 			"name": "404",
