@@ -1,0 +1,224 @@
+@import url(http://fonts.googleapis.com/css?family=Finger+Paint);
+
+body{
+  margin: 0;
+  padding: 0;
+overflow:hidden;
+}
+
+.init{
+  display: none;
+  
+}
+
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: #FFA620;
+       color: #fff;
+}
+
+/* Works in Safari */
+::selection {
+       background-color: #FFA620;
+       color: #fff;
+}
+
+.text-sign .text {
+    color: #9D4F00;
+    font-size: 23px;
+    margin-left: 47px;
+    margin-top: 50px;
+    	-moz-transform:rotate(-5deg);
+	-webkit-transform:rotate(-5deg);
+	-o-transform:rotate(-5deg);
+	-ms-transform:rotate(-5deg);
+}
+.webkit .sweat.show{
+     top: 90px!important;
+}
+.sweat.show{
+    opacity: 0;
+    top: 50px;
+     -webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
+}
+
+.sweat {
+    background-image: url("../images/sweat.png");
+    background-repeat: no-repeat;
+    height: 42px;
+    left: 220px;
+    opacity: 1;
+    position: absolute;
+       
+    width: 94px;
+    top: 220px;
+}
+
+.work-sign {
+    background-image: url("../images/working-sign.png");
+    height: 339px;
+    width: 218px;
+    position: absolute;
+    z-index: 300;
+    top: 0;
+   right: 20px;
+}
+.text-sign {
+    background-image: url("../images/texty-sign.png");
+    height: 225px;
+    width: 250px;
+    position: absolute;
+    z-index: 300;
+    top: -120px;
+    left: 80px;
+    font-family: 'Finger Paint', cursive;
+}
+#indicator{
+    background-color: #fff;
+     border-radius: 5px;
+       padding: 10px;
+       margin: auto;
+        background-image:  url(../images/load.gif) ;
+        background-repeat: no-repeat;
+        background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+
+.sky{
+     background-image:  url(../images/sky-bg.jpg) ;
+     
+      background-repeat: repeat-x;
+}
+
+.ground {
+    background-image: url("../images/ground.png");
+    background-repeat: repeat-x;
+    min-height: 200px;
+    width: 100%;
+    top: -190px;
+    position: relative;
+}
+.convas{
+     background-color: #FFA620;
+     position: relative;
+      min-height: 991px;
+     
+}
+
+.holder {
+    margin: 0 auto;
+    position: relative;
+    width: 900px;
+    top: -380px;
+}
+.mountain {
+    background-image: url("../images/mountain.png");
+    background-repeat: repeat-x;
+    min-height: 172px;
+    top: -120px;
+    width: 200%;
+    left: -60px;
+    position: relative;
+    z-index: 0;
+}
+
+
+.rocks {
+    background-image: url("../images/rocks.png");
+    height: 455px;
+  left: -100px;
+    position: absolute;
+    width: 791px;
+    top: 0px;
+    z-index: 300;
+}
+
+.hole {
+    background-image: url("../images/hole.png");
+    height: 273px;
+    position: absolute;
+    top: 80px;
+    width: 807px;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.worker {
+    background-image: url("../images/worker.png");
+    background-repeat: no-repeat;
+    height: 189px;
+    width: 242px;
+    position: absolute;
+    left: 190px;
+    top: 35px;
+
+}
+.webkit.worker{
+     left: 190px;
+    top: 70px;
+}
+.swing {
+	
+	  -webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
+	-moz-transform:rotate(40deg);
+	-webkit-transform:rotate(40deg);
+	-o-transform:rotate(40deg);
+	-ms-transform:rotate(40deg);
+}
+.webkit.right{
+    top: 460px;
+     left: 280px;
+}
+.right {
+	-moz-transform:rotate(190deg);
+	-webkit-transform:rotate(190deg);
+	-o-transform:rotate(190deg);
+	-ms-transform:rotate(190deg);
+        left: 330px;
+    top: 430px;
+}
+
+.ground-bottom .cleaner {
+    background-color: #FFA620;
+    bottom: -70px;
+    height: 300px;
+    position: absolute;
+    width: 100%;
+}
+.ground-bottom {
+    background-image: url("../images/ground-bottom.png");
+    background-repeat: no-repeat;
+    height: 463px;
+    left: -297px;
+    position: absolute;
+    top: 148px;
+    width: 160%;
+    z-index: 200;
+}
+.clouds { 
+     
+
+
+   
+    height: 300px;
+
+    
+    background: transparent url(../images/clouds.png) repeat-x;
+
+}

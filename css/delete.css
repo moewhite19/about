@@ -1,0 +1,222 @@
+/* 弃用元素 */
+.head_img_div {
+	position: relative;
+	z-index: 2;
+	display: inline;
+	width: 200px;
+	height: 200px;
+	margin-top: 7px;
+}
+
+.green_cycle {
+	width: 260px;
+	height: 260px;
+	margin: 0 auto;
+	padding-top: 70px;
+}
+
+.yellow_cycle {
+	display: inline-block;
+	width: 240px;
+	height: 240px;
+	margin: 10px;
+}
+
+.blue_cycle {
+	width: 220px;
+	height: 220px;
+	text-align: center;
+	margin: 10px auto 10px auto;
+}
+
+.hobby_content{
+    padding: 15px 0 0 0;
+}
+
+.hobby_content li{
+    width: 30%;
+    float: left;
+}
+
+.hobby_img_div{
+    position: relative;
+    text-align: center;
+    height: 280px;
+}
+
+.spinner{
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    border-radius: 50%;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity:0.8;
+    -khtml-opacity: 0.8;
+    -webkit-animation: headneon 1.5s ease-in-out infinite alternate;
+    -moz-animation: headneon 1.5s ease-in-out infinite alternate;
+    animation: headneon 1.5s ease-in-out infinite alternate;
+}
+
+.spinner_01{
+    border: 10px solid #ecab18;
+    border-right-color: #1ad280;
+    border-bottom-color: #1ad280;
+}
+
+.spinner_02{
+    border: 10px solid #ff9933;
+    border-right-color: #3366cc;
+    border-bottom-color: #3366cc;
+}
+
+.spinner_03{
+    border: 10px solid #339933;
+    border-right-color: #cc9900;
+    border-bottom-color: #cc9900;
+}
+
+.hobby_img{
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -115px;
+    right: 0;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+}
+
+.hobby_img_info{
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -115px;
+    right: 0;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    opacity:0;
+    -khtml-opacity: 0;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+.hobby_img_info h1{
+    margin:80px 45px 0 45px;
+    line-height: 40px;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: lighter;
+    border-bottom: 1px solid #ffffff;
+}
+
+.hobby_img_info h2{
+    color: #bbb;
+    font-size: 18px;
+    line-height: 35px;
+    font-style: italic;
+}
+
+.hobby_img img{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;    
+}
+
+.hobby_img_div:hover .spinner{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.hobby_img_div:hover .hobby_img_info{
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    opacity:1;
+    -khtml-opacity: 1;
+}
+
+.hobby_text_div{
+    padding: 0 30px;
+    color: #DADADA;
+}
+
+.hobby_text_div p{
+    text-indent:2em;
+    padding: 0.2em 0;
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+.hobby_text_div p a{
+    color: #EEEEEE;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+.hobby_01{
+    background: rgba(140, 131, 131, 0.6);
+    padding: 15px 0 15px 0;
+    margin-right: 3%;
+    border-radius: 10px;
+}
+
+.hobby_02{
+    background: rgba(132, 59, 59, 0.6);
+    padding: 15px 0 10px 0;
+    margin-right: 3%;
+    border-radius: 10px;
+}
+
+.hobby_03{
+    background: rgba(114, 53, 134, 0.6);
+    padding: 15px 0 10px 0;
+    border-radius: 10px;
+}
+
+.hobby_03 .hobby_text_div p a{
+    color: #969292;
+}
+
+
+.qrcode_div{
+    margin-top: 10px;   
+    text-align: center; 
+}
+
+.qrcode_div span{
+    width: 45px;
+    height: 45px;
+    position: relative;
+    display: inline-block;
+    /*background-size: 45px;
+    background-repeat: no-repeat;*/
+}
+
+.qrcode_div span img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 5px solid greenyellow;
+    border-radius: 3px;
+    top: -170px;
+    left: -55px;
+    display: block;
+    display: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
